@@ -1,0 +1,32 @@
+body {
+  background: #2c241f;
+  color: #f8f0d0;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #3b2f27;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+}
+button {
+  background: #d4af37;
+  color: #2c241f;
+  border: none;
+  padding: 10px 15px;
+  margin: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:disabled {
+  background: #6b5e4f;
+  cursor: not-allowed;
+}
+h1 {
+  color: #ffd700;
+}
