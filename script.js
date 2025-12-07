@@ -144,12 +144,19 @@ function buyBoost(level, cost) {
 // --- Claim (User Request) ---
 function claimReward() {
   if (points < 100) return;
-  // Simpan request (di MVP, cukup notifikasi)
-  alert(`✅ Request submitted!\nSend your wallet address to @_idcryptnews or wait for batch send.\n(We'll send 1 ARD soon!)`);
-  // Optional: kirim ke Google Form/Sheet di sini
+
+  // Ganti dengan link Google Form-mu
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSffN7IA7z1OJM0-fsrBKrybu-MI1t3Ckv76U4QqNP6X-OdY4Q/viewform?usp=pp_url&entry.123456789=" + encodeURIComponent(walletAddress) + "&entry.987654321=" + points;
+
+  // Buka form di tab baru
+  window.open(formUrl, "_blank");
+
+  // Kurangi poin (opsional: atau reset setelah konfirmasi)
   points -= 100;
   saveGameState();
   updateUI();
+
+  alert("Form klaim terbuka! Isi & kirim → hadiah akan dikirim dalam 24 jam.");
 }
 
 // --- Referral (auto detect) ---
