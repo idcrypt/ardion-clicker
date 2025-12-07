@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ardion Ant Miner</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@solana/wallet-adapter-react@0.15.35/umd/wallet-adapter-react.production.min.js"></script>
+  <script src="https://unpkg.com/@solana/wallet-adapter-react-ui@0.9.35/umd/wallet-adapter-react-ui.production.min.js"></script>
+  <script src="https://unpkg.com/@solana/web3.js@1.95.3/lib/index.iife.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🐜 Ardion Ant Miner</h1>
+    <p id="status">Connect wallet to start mining!</p>
+    <div id="wallet-buttons"></div>
+    
+    <div id="game" style="display:none;">
+      <p>Poin: <span id="points">0</span> / 50 hari ini</p>
+      <p>Mining: <span id="multiplier">1x</span></p>
+      
+      <button id="mineBtn" onclick="mine()">⛏️ Mine ARD!</button>
+      
+      <h3>Boost (Beli dengan Poin)</h3>
+      <button onclick="buyBoost(2, 50)">2x Boost (50 poin)</button>
+      <button onclick="buyBoost(3, 150)">3x Boost (150 poin)</button>
+      <button onclick="buyBoost(5, 400)">5x Boost (400 poin)</button>
+      
+      <h3>Referral</h3>
+      <p id="refLink">Connect wallet to get your link</p>
+      
+      <button id="claimBtn" onclick="claimReward()" disabled>🎁 Claim 1 ARD (100 poin)</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
