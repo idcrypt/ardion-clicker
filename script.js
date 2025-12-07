@@ -1,6 +1,6 @@
 // --- CONFIG ---
 const ARD_MINT = "4uBm5qxRZdK8XJzQGwYEn9vqDbSpzLnVuJMndnFjpump";
-const MIN_HOLD = 10; // minimal hold ARD
+const MIN_HOLD = 100000; // minimal hold ARD
 
 // --- STATE ---
 let walletAddress = null;
@@ -145,7 +145,7 @@ function buyBoost(level, cost) {
 function claimReward() {
   if (points < 100) return;
   // Simpan request (di MVP, cukup notifikasi)
-  alert(`✅ Request submitted!\nSend your wallet address to @yourtwitter or wait for batch send.\n(We'll send 1 ARD soon!)`);
+  alert(`✅ Request submitted!\nSend your wallet address to @_idcryptnews or wait for batch send.\n(We'll send 1 ARD soon!)`);
   // Optional: kirim ke Google Form/Sheet di sini
   points -= 100;
   saveGameState();
