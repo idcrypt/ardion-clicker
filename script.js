@@ -45,7 +45,7 @@ function renderRefLink() {
 // --- Cek Balance ARD ---
 async function checkArdBalance() {
   try {
-    const connection = new solanaWeb3.Connection("https://rpc.ankr.com/solana");
+    const connection = new solanaWeb3.Connection("https://mainnet.helius-rpc.com/?api-key=d388bfa3-773a-41a5-b14f-560f924abfbc");
     const tokenAccounts = await connection.getParsedTokenAccountsByOwner(
       new solanaWeb3.PublicKey(walletAddress),
       { mint: new solanaWeb3.PublicKey(ARD_MINT) }
